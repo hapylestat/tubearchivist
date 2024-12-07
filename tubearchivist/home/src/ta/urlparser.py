@@ -99,7 +99,7 @@ class Parser:
         elif len_id_str in (44, 34, 26, 18) or id_str.startswith("TA_playlist_"):
             item_type = "playlist"
         else:
-            raise ValueError(f"not a valid id_str: {id_str}")
+            raise ValueError(f"not a valid id_str: {id_str}, len {len(id_str)}")
 
         return {"type": item_type, "url": id_str}
 
